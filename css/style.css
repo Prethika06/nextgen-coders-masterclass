@@ -1,0 +1,294 @@
+/* Reset margin, padding and set box-sizing for all elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and html styles  */
+body,
+html {
+  background-color: #e4eced;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header styles */
+
+.header {
+  background-color: navy;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 20px 40px;
+  width: 100%;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.header li {
+  margin: 0 15px;
+  list-style: none;
+}
+
+.header li a {
+  color: #d5e5f4;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.header li a:hover,
+.header li a:focus {
+  text-decoration: underline;
+  color: #8dcbd7;
+  outline: none;
+}
+
+.header li a:focus-visible {
+  outline: 2px solid #8dcbd7;
+  outline-offset: 2px;
+}
+
+.header li a.active {
+  color: #8dcbd7;
+  text-decoration: underline;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #004080;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: "Poppins", sans-serif;
+  margin: 40px 0 20px;
+}
+
+#home {
+  padding-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 20px;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 30px;
+}
+
+.details {
+  background-color: #f0f4f8;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.details:hover {
+  box-shadow: 0 8px 16px rgba(36, 9, 89, 0.3);
+  border-color: #002060;
+}
+
+.event-details {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #003366;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.cta-btn {
+  background-color: navy;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.cta-btn:hover {
+  background-color: #002060;
+  transform: scale(1.1);
+  box-shadow: 0 5px 5px rgba(63, 62, 62, 0.8);
+}
+
+/* About styling */
+
+#about h2 {
+  padding-bottom: 20px;
+  padding-top: 100px;
+}
+
+#about p {
+  text-indent: 30px;
+  padding: 0 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  display: block;
+  border-radius: 30px;
+  margin: 30px auto;
+}
+
+/* Contact styling */
+#contact {
+  background-color: #001f4d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#contact p {
+  line-height: 1.6;
+}
+
+#contact a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+  color: #8dcbd7;
+}
+
+/*Mobile Responsiveness */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #home h2 {
+    font-size: 1.5em;
+  }
+
+  .banner-image {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+  }
+
+  #about {
+    scroll-margin-top: 110px;
+  }
+
+  #about h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+  }
+
+  #about p {
+    text-indent: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.8em;
+  }
+
+  .details {
+    padding: 10px;
+  }
+
+  .details p {
+    font-size: 1em;
+  }
+
+  .cta-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .about-image {
+    max-width: 270px;
+    height: auto;
+  }
+
+  #contact p {
+    font-size: 0.8em;
+  }
+
+  #contact a {
+    font-size: 0.8em;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .header > ul {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #about p {
+    text-indent: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .details {
+    padding: 20px;
+    width: 90%;
+  }
+}
